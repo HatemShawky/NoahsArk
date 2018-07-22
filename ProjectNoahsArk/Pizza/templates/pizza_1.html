@@ -1,0 +1,27 @@
+{% extends "pizza_layout.html" %}
+{% block title %}Pizza Comparer{% endblock %}
+{% block body %}
+		<h1>Compares between 2 Rounded Pizzas</h1>
+		<h1>Provide each one's radius, thickness (height) and price,</h1>
+		<h1>and we tell you which one is more cost-efficient !</h1>
+	<form action="{% url 'results_page' %}" method="post">
+		{% csrf_token %} 
+		{{ formhere.as_ul }}
+		<input type="submit" value="Compare" />
+	</form>
+	<p><a href="/">Homepage</a></p>
+{% endblock %}
+		
+
+
+<!--
+Pizza 1:
+			<label>Radius: </label><input type="number" name="p1r" >
+			<label>Height (thickness): </label><input type="number" name="p1h" ><br />
+			<label>Price: </label><input type="number" name="p1p" >
+			Pizza 2:
+			<label>Radius: </label><input type="number" name="p2r" >
+			<label>Height (thickness): </label><input type="number" name="p2h" >
+			<label>Price: </label><input type="number" name="p2p" >
+			<br />
+-->

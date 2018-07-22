@@ -1,0 +1,3 @@
+https://www.youtube.com/watch?v=b8RpVs7bSgo
+https://stackoverflow.com/questions/8433510/html-forms-to-django
+https://docs.djangoproject.com/en/2.0/ref/forms/fields/
