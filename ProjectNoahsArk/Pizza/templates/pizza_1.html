@@ -4,7 +4,7 @@
 		<h1>Compares between 2 Rounded Pizzas</h1>
 		<h1>Provide each one's radius, thickness (height) and price,</h1>
 		<h1>and we tell you which one is more cost-efficient !</h1>
-	<form action="{% url 'results_page' %}" method="post">
+	<form action="{% url 'pizza_results_page' %}" method="post">
 		{% csrf_token %} 
 		{{ formhere.as_ul }}
 		<input type="submit" value="Compare" />
