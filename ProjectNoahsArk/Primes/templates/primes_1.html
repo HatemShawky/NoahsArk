@@ -1,0 +1,12 @@
+{% extends "primes_layout.html" %}
+{% block title %}Primes generator{% endblock %}
+{% block body %}
+		<h1>Generates a list of prime numbers below a set limit</h1>
+	<form action="{% url 'primes_results_page' %}" method="post">
+		{% csrf_token %} 
+		{{ formhere.as_p }}
+		<input type="submit" value="Generate" />
+	</form>
+	<p><a href="/">Homepage</a></p>
+{% endblock %}
+		

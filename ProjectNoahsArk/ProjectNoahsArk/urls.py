@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path(route='pizza/', view=include('Pizza.urls')),
+    path(route='primes/', view=include('Primes.urls')),
     path(route='', view=include('Homepage.urls')),
     path('admin/', admin.site.urls),
     

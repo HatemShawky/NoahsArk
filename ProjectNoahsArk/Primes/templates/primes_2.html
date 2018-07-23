@@ -1,0 +1,15 @@
+{% extends "primes_layout.html" %}
+{% block title %}Primes Generator Results{% endblock %}
+{% block body %}
+	<h1>Done</h1>
+	<h4>Primes below {{ primelimit }} are:</h4>
+	<ul>
+	{% for prime in primeslist %}
+		<li> {{ prime }}</li>
+	{% endfor %}
+	</ul>
+	<h4>List view:</h4>
+	<p> {{ primeslist }}</p>
+	
+	<p><a href="/">Homepage</a></p>
+{% endblock %}
