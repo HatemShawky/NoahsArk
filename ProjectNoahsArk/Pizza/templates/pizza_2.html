@@ -2,9 +2,9 @@
 {% block title %}Pizza Comparer Results{% endblock %}
 {% block body %}
 	<h1>Done</h1>
-	<h4> Pizza#1 had Volume:price ratio of </h4> <h5> {{ VPRatio1 }}</h5> 
-	<h4> While Pizza#2 had Volume:price ratio of </h4> <h5>{{ VPRatio2 }}</h5>
-	<h4> With a diff. of </h4> <h5>{{ diff }}</h5>
+	<h4> Pizza#1 had Volume:price ratio of </h4> <h5> {{ VPRatio1|floatformat:2 }}</h5> 
+	<h4> While Pizza#2 had Volume:price ratio of </h4> <h5>{{ VPRatio2|floatformat:2 }}</h5>
+	<h4> With a diff. of </h4> <h5>{{ diff|floatformat:2 }}</h5>
 	{% if VPRatio1 > VPRatio2 %}
 		<h4> So Pizza#1 is the better choice</h4>
 	{% elif VPRatio1 < VPRatio2 %}
