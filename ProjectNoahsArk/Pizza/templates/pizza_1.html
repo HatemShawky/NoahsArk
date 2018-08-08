@@ -6,7 +6,9 @@
 		<h1>and we tell you which one is more cost-efficient !</h1>
 	<form action="{% url 'pizza_results_page' %}" method="post">
 		{% csrf_token %} 
-		{{ formhere.as_ul }}
+		<table>
+			{{ formhere.as_table }}
+		</table>
 		<input type="submit" value="Compare" />
 	</form>
 	<p><a href="/">Homepage</a></p>
